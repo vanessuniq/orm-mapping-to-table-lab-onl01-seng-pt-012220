@@ -11,7 +11,7 @@ class Student
   
   def self.create_table
     sql = <<-SQL 
-    CREATE TABLE IF NOT EXISTs students(id INTEGER PRIMARY KEY, 
+    CREATE TABLE IF NOT EXISTS students(id INTEGER PRIMARY KEY, 
     name TEXT, grade TEXT)
     SQL
     DB[:conn].execute(sql)
@@ -19,7 +19,7 @@ class Student
   
   def self.drop_table
     sql = <<-SQL 
-    DROP TABLE IF EXISTs students
+    DROP TABLE IF EXISTS students
     SQL
     
     DB[:conn].execute(sql)
