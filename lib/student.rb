@@ -18,7 +18,7 @@ class Student
   end
   
   def self.drop_table
-    sql = <<- SQL 
+    sql = <<-SQL 
     DROP TABLE IF EXIST students
     SQL
     
@@ -26,7 +26,7 @@ class Student
   end
   
   def save
-    sql = <<- SQL
+    sql = <<-SQL
     INSERT INTO students (name, grade) 
     VALUES(?, ?)
     SQL
@@ -39,9 +39,5 @@ class Student
     student.save
     student 
   end
-  
-
-  # Remember, you can access your database connection anywhere in this class
-  #  with DB[:conn]  
   
 end
